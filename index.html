@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bates Contracting LLC | Licensed Builder | Traverse City, MI</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Bates Contracting LLC — Licensed Builder & Fully Insured with 25+ years of experience. Remodels, repairs, flooring, drywall, paint, trim, decks, and more. Serving Traverse City, MI and surrounding areas. Call 231-632-3377." />
+  <meta name="keywords" content="Bates Contracting LLC, contractor Traverse City MI, licensed builder, remodeling Traverse City, drywall finishing, flooring install, deck building, bathroom remodel, kitchen remodel, trim carpentry, home renovations" />
+  <meta name="author" content="Bates Contracting LLC" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Bates Contracting LLC | Licensed Builder | Traverse City, MI" />
+  <meta property="og:description" content="Licensed Builder • Fully Insured • 25+ Years Experience • Call 231-632-3377." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/hero.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111826;
+      --card2:#0f1724;
+      --text:#eaf0ff;
+      --muted:#b9c3d6;
+      --accent:#38bdf8;
+      --accent2:#60a5fa;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 16px 40px rgba(0,0,0,.55);
+      --radius: 18px;
+
+      /* Facebook */
+      --fb:#1877F2;
+      --fb2:#0d5bd7;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(96,165,250,.16), transparent 55%),
+                  linear-gradient(180deg, #070a0f, #0b0f14 45%, #070a0f);
+      color:var(--text);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ width:min(1100px, calc(100% - 36px)); margin:0 auto; }
+
+    /* Top bar */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(10,14,20,.65);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:240px;
+    }
+    .logo{
+      width:42px; height:42px;
+      border-radius:14px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(56,189,248,.25), rgba(96,165,250,.20));
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      font-family: Oswald, sans-serif;
+      letter-spacing:.5px;
+      font-weight:700;
+    }
+    .brand h1{
+      font-family: Oswald, sans-serif;
+      font-size:18px;
+      margin:0;
+      letter-spacing:.8px;
+      line-height:1.1;
+    }
+    .brand .sub{
+      margin:0;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:center;
+      flex:1;
+    }
+    nav a{
+      font-size:13px;
+      color:var(--muted);
+      opacity:.95;
+    }
+    nav a:hover{ color:var(--text); }
+
+    .cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:flex-end;
+      min-width:240px;
+    }
+    .btn{
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      padding:10px 12px;
+      border-radius:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      font-size:13px;
+      transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(96,165,250,.95));
+      color:#06111c;
+      border: none;
+      box-shadow: 0 14px 34px rgba(56,189,248,.22);
+    }
+    .btn.primary:hover{ background: linear-gradient(135deg, rgba(56,189,248,1), rgba(96,165,250,1)); }
+
+    /* Facebook button */
+    .btn.fb{
+      border:1px solid rgba(24,119,242,.45);
+      background: linear-gradient(135deg, rgba(24,119,242,.95), rgba(13,91,215,.95));
+      color:#ffffff;
+      box-shadow: 0 14px 34px rgba(24,119,242,.18);
+    }
+    .btn.fb:hover{
+      background: linear-gradient(135deg, rgba(24,119,242,1), rgba(13,91,215,1));
+      box-shadow: 0 18px 40px rgba(24,119,242,.22);
+    }
+    .fb-icon{
+      width:16px;
+      height:16px;
+      display:inline-block;
+    }
+    .fb-icon svg{ width:16px; height:16px; display:block; }
+
+    /* Hero */
+    .hero{
+      padding:54px 0 30px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .hero-card{
+      background: rgba(17,24,38,.72);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-main{
+      padding:28px 26px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:.3px;
+    }
+    .hero h2{
+      margin:14px 0 10px;
+      font-family: Oswald, sans-serif;
+      font-size:44px;
+      line-height:1.02;
+      letter-spacing:1px;
+    }
+    .hero p{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size:15px;
+      line-height:1.55;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 14px;
+    }
+
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      padding:18px;
+    }
+    .side-box{
+      background: rgba(15,23,36,.78);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding:16px;
+    }
+    .side-box h3{
+      margin:0 0 6px;
+      font-size:14px;
+      letter-spacing:.2px;
+    }
+    .side-box p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+    .kpi{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .kpi .chip{
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      padding:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Sections */
+    section{ padding: 26px 0; }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:12px;
+    }
+    .section-title h3{
+      margin:0;
+      font-family: Oswald, sans-serif;
+      letter-spacing:.8px;
+      font-size:26px;
+    }
+    .section-title span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+
+    .card{
+      background: rgba(17,24,38,.68);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius);
+      padding:16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.45);
+    }
+    .card h4{
+      margin:0 0 6px;
+      font-size:14px;
+      letter-spacing:.2px;
+    }
+    .card p{
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    /* Services list */
+    .services-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .service-list{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .service-item{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+    .dot{
+      width:10px; height:10px;
+      margin-top:4px;
+      border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(56,189,248,.12);
+      flex:0 0 auto;
+    }
+    .service-item strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:2px;
+    }
+    .service-item span{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.35;
+    }
+
+    /* Gallery */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:10px;
+    }
+    .thumb{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      aspect-ratio: 1 / 1;
+      cursor:pointer;
+      transition: transform .12s ease;
+    }
+    .thumb:hover{ transform: translateY(-2px); }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: saturate(1.05) contrast(1.05);
+    }
+    .thumb .ph{
+      position:absolute;
+      inset:0;
+      display:none;
+      place-items:center;
+      color: rgba(234,240,255,.75);
+      font-size:12px;
+      text-align:center;
+      padding:10px;
+    }
+
+    /* Service areas */
+    .areas{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .contact-card{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .contact-card h4{
+      margin:0 0 6px;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .contact-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+    .contact-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      margin-top: 16px;
+      padding: 18px 0 26px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;
+      inset:0;
+      background: rgba(0,0,0,.82);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:999;
+    }
+    .lightbox.open{ display:flex; }
+    .lightbox img{
+      max-width: min(1100px, 96vw);
+      max-height: 86vh;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 20px 60px rgba(0,0,0,.7);
+    }
+
+    /* Mobile */
+    @media (max-width: 980px){
+      nav{ display:none; }
+      .hero-grid{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .services-grid{ grid-template-columns: 1fr; }
+      .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+      .cta{ min-width: unset; }
+      .hero h2{ font-size:36px; }
+    }
+  </style>
+
+  <!-- Local Business Schema (helps Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bates Contracting LLC",
+    "description": "Licensed Builder & Fully Insured with 25+ years of experience. Remodels, repairs, flooring, drywall, paint, trim, decks, and more.",
+    "telephone": "+1-231-632-3377",
+    "email": "Ronbates66@gmail.com",
+    "areaServed": "Traverse City, MI and surrounding areas",
+    "url": "https://batescontractingllc.com"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="logo">BC</div>
+        <div>
+          <h1>Bates Contracting LLC</h1>
+          <p class="sub">Licensed Builder • Fully Insured • 25+ Years Experience</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#areas">Service Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn" href="mailto:Ronbates66@gmail.com">✉️ Email</a>
+        <a class="btn primary" href="tel:12316323377">📞 Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-card">
+        <div class="hero-main">
+          <div class="badge">✅ 25+ Years Experience • Quality Work • Done Right • The First Time</div>
+
+          <h2>From Remodels to Repairs —<br/>We Build It Like It’s Our Own.</h2>
+
+          <p>
+            Bates Contracting LLC provides reliable, clean, professional home improvement and renovation work
+            in Traverse City and the surrounding areas. With <strong>25+ years of hands-on experience</strong>,
+            you get solid craftsmanship, clean finish details, and a contractor who communicates and shows up.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:12316323377">📞 Get a Quote</a>
+            <a class="btn" href="#services">🛠️ View Services</a>
+
+            <!-- Facebook Link with Logo -->
+            <a class="btn fb" href="https://www.facebook.com/share/17kR7yHmUS/" target="_blank" rel="noopener">
+              <span class="fb-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.09 4.39 23.08 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.32 0 2.7.24 2.7.24v2.98h-1.52c-1.5 0-1.97.94-1.97 1.9v2.28h3.35l-.54 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07Z" fill="white"/>
+                </svg>
+              </span>
+              Facebook Page
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card hero-side">
+        <div class="side-box">
+          <h3>What You Can Expect</h3>
+          <p>Honest recommendations, clean work, strong finish details, and a job done correctly — start to finish.</p>
+          <div class="kpi">
+            <div class="chip">✅ 25+ Years Experience</div>
+            <div class="chip">✅ Licensed Builder</div>
+            <div class="chip">✅ Fully Insured</div>
+            <div class="chip">📍 Traverse City, MI</div>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <h3>Fastest Way to Reach Us</h3>
+          <p>
+            <strong>Call:</strong> <a href="tel:12316323377">231-632-3377</a><br/>
+            <strong>Email:</strong> <a href="mailto:Ronbates66@gmail.com">Ronbates66@gmail.com</a>
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- TRUST / HIGHLIGHTS -->
+  <section>
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Reliable. Skilled. Straightforward.</h3>
+        <span>No fluff — just good work.</span>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>🏆 25+ Years Experience</h4>
+          <p>Decades of real-world experience means cleaner results, smarter solutions, and fewer surprises.</p>
+        </div>
+        <div class="card">
+          <h4>🧼 Clean Job Sites</h4>
+          <p>Respectful work practices with jobsite protection, cleanup, and attention to the details homeowners notice.</p>
+        </div>
+        <div class="card">
+          <h4>📆 Project Coordination</h4>
+          <p>Need subs scheduled or materials ordered? We coordinate the moving parts to keep projects flowing smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Services</h3>
+        <span>Residential • Remodels • Repairs • Improvements</span>
+      </div>
+
+      <div class="services-grid">
+        <div class="card">
+          <h4>Renovations & Builds</h4>
+          <div class="service-list">
+            <div class="service-item"><div class="dot"></div><div><strong>Room Additions</strong><span>Expansions, layout changes, and full build coordination.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Full Home Renovations</strong><span>Start-to-finish upgrades and modernization.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Kitchen & Bathroom Remodels</strong><span>Functional, clean, and high-quality finish work.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Basement & Attic Finishing</strong><span>Drywall, flooring, trim, lighting coordination, and more.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Garage Builds / Conversions</strong><span>Create a new workspace, storage, or living space.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>ADU Builds (Accessory Dwelling Units)</strong><span>Project coordination and build support.</span></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Interior Work</h4>
+          <div class="service-list">
+            <div class="service-item"><div class="dot"></div><div><strong>Drywall Hanging & Finishing</strong><span>Mud/tape, patch work, smooth finish ready for paint.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Texturing Ceilings/Walls</strong><span>Match or refresh texture for a clean consistent look.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Interior Painting</strong><span>Walls, ceilings, trim, and refresh projects.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Trim & Finish Carpentry</strong><span>Base, case, crown, doors, shelving, closets, and more.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Cabinet Installation</strong><span>Kitchens, bathrooms, laundry, and custom setups.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Flooring Installation</strong><span>LVP, hardwood, laminate, tile, and removal.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="services-grid">
+        <div class="card">
+          <h4>Exterior Work</h4>
+          <div class="service-list">
+            <div class="service-item"><div class="dot"></div><div><strong>Siding & Window Replacement</strong><span>Upgrades, repairs, weatherproofing, and sealing.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Roof Repairs / Replacement</strong><span>Repair coordination and replacement support.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Decks, Porches & Patios</strong><span>Builds, repairs, railings, and handrails.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Exterior Painting</strong><span>Refresh and protect siding, trim, doors, and more.</span></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Coordination & Repairs</h4>
+          <div class="service-list">
+            <div class="service-item"><div class="dot"></div><div><strong>Plumbing / Electrical / HVAC Coordination</strong><span>Fixtures, fans, outlets, switches, ductwork, mini-splits (coordination).</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Water / Mold / Storm Damage Repairs</strong><span>Repair coordination and restoration support.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Permits & Inspections Management</strong><span>Help keeping the process clean and organized.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Jobsite Protection & Cleanup</strong><span>Floor/wall coverings, debris hauling, dump runs, punch-list finishing.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Concrete Slabs</strong><span>Project coordination and placement work.</span></div></div>
+            <div class="service-item"><div class="dot"></div><div><strong>Insulation / Vapor Barrier / Soundproofing</strong><span>Comfort improvements for finished spaces.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Project Gallery</h3>
+        <span>Photos coming soon — you can add them anytime</span>
+      </div>
+
+      <div class="card">
+        <div class="gallery-grid">
+          <div class="thumb" data-img="img/project-1.jpg">
+            <img src="img/project-1.jpg" alt="Project 1" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-1.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-2.jpg">
+            <img src="img/project-2.jpg" alt="Project 2" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-2.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-3.jpg">
+            <img src="img/project-3.jpg" alt="Project 3" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-3.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-4.jpg">
+            <img src="img/project-4.jpg" alt="Project 4" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-4.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-5.jpg">
+            <img src="img/project-5.jpg" alt="Project 5" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-5.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-6.jpg">
+            <img src="img/project-6.jpg" alt="Project 6" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-6.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-7.jpg">
+            <img src="img/project-7.jpg" alt="Project 7" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-7.jpg</div>
+          </div>
+
+          <div class="thumb" data-img="img/project-8.jpg">
+            <img src="img/project-8.jpg" alt="Project 8" onerror="this.style.display='none'; this.parentElement.querySelector('.ph').style.display='grid';">
+            <div class="ph">Add a photo<br/>img/project-8.jpg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section id="areas">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Service Areas</h3>
+        <span>Serving Traverse City and surrounding towns</span>
+      </div>
+
+      <div class="card">
+        <p style="margin:0;color:var(--muted);font-size:13px;">
+          Bates Contracting LLC proudly serves homeowners and property owners within roughly a <strong>50-mile radius</strong> of Traverse City, Michigan.
+        </p>
+
+        <div class="areas">
+          <span class="pill">Traverse City</span>
+          <span class="pill">Garfield Township</span>
+          <span class="pill">East Bay Township</span>
+          <span class="pill">Long Lake</span>
+          <span class="pill">Chums Corner</span>
+          <span class="pill">Acme</span>
+          <span class="pill">Williamsburg</span>
+          <span class="pill">Interlochen</span>
+          <span class="pill">Grawn</span>
+          <span class="pill">Kingsley</span>
+          <span class="pill">Buckley</span>
+          <span class="pill">Fife Lake</span>
+          <span class="pill">Kalkaska</span>
+          <span class="pill">Elk Rapids</span>
+          <span class="pill">Rapid City</span>
+          <span class="pill">Bellaire</span>
+          <span class="pill">Central Lake</span>
+          <span class="pill">Torch Lake</span>
+          <span class="pill">Alden</span>
+          <span class="pill">Mancelona</span>
+          <span class="pill">Suttons Bay</span>
+          <span class="pill">Lake Leelanau</span>
+          <span class="pill">Cedar</span>
+          <span class="pill">Northport</span>
+          <span class="pill">Leland</span>
+          <span class="pill">Glen Arbor</span>
+          <span class="pill">Empire</span>
+          <span class="pill">Lake Ann</span>
+          <span class="pill">Honor</span>
+          <span class="pill">Beulah</span>
+          <span class="pill">Benzonia</span>
+          <span class="pill">Frankfort</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-title">
+        <h3>Contact</h3>
+        <span>Get on the schedule / request a quote</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <div>
+            <h4>Call or Text</h4>
+            <p>
+              Fastest way to reach Bates Contracting LLC:
+              <br/><strong><a href="tel:12316323377">231-632-3377</a></strong>
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="tel:12316323377">📞 Call Now</a>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <div>
+            <h4>Email</h4>
+            <p>
+              Prefer email? Send your project details and we’ll get back to you.
+              <br/><strong><a href="mailto:Ronbates66@gmail.com">Ronbates66@gmail.com</a></strong>
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn" href="mailto:Ronbates66@gmail.com">✉️ Email Now</a>
+            <a class="btn fb" href="https://www.facebook.com/share/17kR7yHmUS/" target="_blank" rel="noopener">
+              <span class="fb-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.09 4.39 23.08 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.32 0 2.7.24 2.7.24v2.98h-1.52c-1.5 0-1.97.94-1.97 1.9v2.28h3.35l-.54 3.49h-2.81V24C19.61 23.08 24 18.09 24 12.07Z" fill="white"/>
+                </svg>
+              </span>
+              Message on Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;">
+        <div>© <span id="year"></span> Bates Contracting LLC • Licensed Builder • Fully Insured • 25+ Years Experience</div>
+        <div>
+          <a href="tel:12316323377">231-632-3377</a> •
+          <a href="mailto:Ronbates66@gmail.com">Ronbates66@gmail.com</a> •
+          <a href="https://www.facebook.com/share/17kR7yHmUS/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="Expanded project photo" />
+  </div>
+
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Lightbox gallery
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+
+    document.querySelectorAll(".thumb").forEach(t => {
+      t.addEventListener("click", () => {
+        const img = t.getAttribute("data-img");
+        lightboxImg.src = img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+    });
+  </script>
+
+</body>
+</html>
